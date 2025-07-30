@@ -1,10 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="action_open_settings" model="ir.actions.act_window">
-        <field name="name">Settings</field>
-        <field name="res_model">res.config.settings</field>
-        <field name="view_mode">form</field>
-        <field name="target">inline</field>
-        <field name="context" eval="{'module': 'general_settings', 'bin_size': False}"/>
-    </record>
+    <odoo>
+        <!--record id="view_hospital_patient_model_form" model="ir.ui.view">
+            <field name="name">hospital.patient.form</field>
+            <field name="model">hospital.patient</field>
+            <field name="arch" type="xml">
+                <form string="Hospital Patient">
+                    <sheet>
+                        <group>
+                            <field name="hospital"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record-->
+
+        <record id="view_hospital_patient_tree" model="ir.ui.view">
+            <field name="name">hospital.patient.tree</field>
+            <field name="model">hospital.patient</field>
+            <field name="arch" type="xml">
+                <tree string="Your Model List">
+                    <field name="hospital"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_hospital_patient_model" model="ir.actions.act_window">
+            <field name="name">Patients Records</field>
+            <field name="res_model">hospital.patient</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </odoo>
 </odoo>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_test_model" model="ir.ui.view">
+        <field name="name">hospital.test.tree</field>
+        <field name="model">hospital.test</field>
+        <field name="arch" type="xml">
+            <tree string="Your Model List">
+                <field name="illness"/>
+                <field name="date_of_test"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_hospital_test_model" model="ir.actions.act_window">
+        <field name="name">test model</field>
+        <field name="res_model">hospital.test</field>
+        <field name="view_mode">tree,form</field>
+
+    </record>
+</odoo>
