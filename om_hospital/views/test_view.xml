@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="view_test_model" model="ir.ui.view">
+    <record id="view_test" model="ir.ui.view">
         <field name="name">hospital.test.tree</field>
         <field name="model">hospital.test</field>
         <field name="arch" type="xml">
-            <tree string="Your Model List">
+            <tree string="Illness details">
                 <field name="illness"/>
+                <field name="patient_id"/>
                 <field name="date_of_test"/>
             </tree>
         </field>
     </record>
-    <record id="action_hospital_test_model" model="ir.actions.act_window">
-        <field name="name">test model</field>
+    <record id="action_test" model="ir.actions.act_window">
+        <field name="name">Test Details</field>
         <field name="res_model">hospital.test</field>
         <field name="view_mode">tree,form</field>
 

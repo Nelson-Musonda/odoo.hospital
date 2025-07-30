@@ -1,1 +1,1 @@
-from . import patient, my_test
+from . import patient, test, doctor

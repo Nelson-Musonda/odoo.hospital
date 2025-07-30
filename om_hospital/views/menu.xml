@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <menuitem id="om_hospital_root_menu" name="Hospital" sequence="1"/>
+    <menuitem id="menu_root" name="Hospital" sequence="1"/>
 
     <menuitem id="patient_menu"
               name="patient"
-              parent="om_hospital.om_hospital_root_menu"
+              parent="om_hospital.menu_root"
               sequence="5"
-              action="om_hospital.action_hospital_patient_model"
+              action="om_hospital.action_patient"
     />
-    <menuitem id="test_menu"
-              name="test"
+    <menuitem id="menu_doctor"
+              name="Doctor"
               sequence="6"
-              parent="om_hospital.om_hospital_root_menu"
-              action="om_hospital.action_hospital_test_model"
+              parent="om_hospital.menu_root"
+              action="om_hospital.action_doctor"
+    />
+    <menuitem id="menu_test"
+              name="test"
+              sequence="7"
+              parent="om_hospital.menu_root"
+              action="om_hospital.action_test"
     />
 
 </odoo>
