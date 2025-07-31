@@ -1,1 +1,4 @@
-from . import patient, test, doctor
+from . import patient
+from . import doctor
+from . import inherit_sales
+from . import test

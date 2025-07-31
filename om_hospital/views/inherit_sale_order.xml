@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_sales" model="ir.ui.view">
+        <field name="name">Sale Order Inherited Class</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date_order']" position="after">
+                <field name="ZRA_invoice_number" position="after"/>
+                <field name="SDC_id" position="after"/>
+                <field name="QR_code" position="after"/>
+                <field name="valid_to" position="after"/>
+                <field name="accepted" position="after"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_inherit_sale_order" model="ir.actions.act_window">
+        <field name="name">Patients Records</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

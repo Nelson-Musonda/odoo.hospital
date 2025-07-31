@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="action_reports" model="ir.actions.report">
+            <field name="name">report_test_model</field>
+            <field name="model">hospital.test</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">om_hospital.report_test</field>
+            <field name="report_file">om_hospital.report_test</field>
+            <field name="binding_type">report</field>
+        </record>
+
+</odoo>

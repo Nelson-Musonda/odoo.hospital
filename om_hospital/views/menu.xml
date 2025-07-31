@@ -2,11 +2,24 @@
 <odoo>
     <menuitem id="menu_root" name="Hospital" sequence="1"/>
 
-    <menuitem id="patient_menu"
+    <menuitem id="menu_patient"
               name="patient"
               parent="om_hospital.menu_root"
               sequence="5"
               action="om_hospital.action_patient"
+    />
+
+    <menuitem id="menu_test"
+              name="test"
+              parent="om_hospital.menu_root"
+              sequence="1"
+              action="om_hospital.action_test"
+    />
+    <menuitem id="menu_sale_order"
+              name="Sales Order"
+              parent="om_hospital.menu_root"
+              sequence="7"
+              action="om_hospital.action_inherit_sale_order"
     />
     <menuitem id="menu_doctor"
               name="Doctor"
@@ -14,11 +27,4 @@
               parent="om_hospital.menu_root"
               action="om_hospital.action_doctor"
     />
-    <menuitem id="menu_test"
-              name="test"
-              sequence="7"
-              parent="om_hospital.menu_root"
-              action="om_hospital.action_test"
-    />
-
 </odoo>

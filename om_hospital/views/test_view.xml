@@ -11,6 +11,7 @@
             </tree>
         </field>
     </record>
+
     <record id="action_test" model="ir.actions.act_window">
         <field name="name">Test Details</field>
         <field name="res_model">hospital.test</field>
