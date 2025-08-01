@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='date_order']" position="after">
-                <field name="ZRA_invoice_number" position="after"/>
+                <field name="ZRA_invoice_number" position="before"/>
                 <field name="SDC_id" position="after"/>
                 <field name="QR_code" position="after"/>
                 <field name="valid_to" position="after"/>

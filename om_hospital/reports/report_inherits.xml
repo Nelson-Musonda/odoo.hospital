@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_sales_inherit" inherit_id="sale.report_saleorder_document">
+        <xpath  expr="//div[@id='informations']" position="after">
+            <p>ZRA: <span t-field="doc.ZRA_invoice_number"/></p>
+            <p>SDC id: <span t-field="doc.SDC_id"/></p>
+        </xpath>
+    </template>
+
+    <template id="report_account_move_inherit" inherit_id="account.report_invoice_document">
+        <xpath expr="//div[@id='qrcode']" position="after">
+            <style>
+                .spaced-h {
+                    margin-top: 250px;
+                    margin-bottom: 80px;
+                    font-size: 200%;
+                }
+            </style>
+
+            <h3 class="bg-success spaced-h">Added fields</h3>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                  <th scope="col">ZRA Invoice Number</th>
+                  <th scope="col">SDC ID</th>
+                  <th scope="col">Date Due</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span t-field="o.ZRA_invoice_number"/></td>
+                  <td><span t-field="o.SDC_id"/></td>
+                  <td><span t-field="o.valid_to"/></td>
+                </tr>
+              </tbody>
+            </table>
+        </xpath>
+    </template>
+</odoo>

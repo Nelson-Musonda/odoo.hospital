@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
     <template id="report_test">
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="obj">
@@ -8,6 +9,7 @@
                        <h3>Test Report<br/>
                            Patient:
                            <span t-field="obj.patient_id"/>
+                           <span class="bg-success">test data to test system usage</span>
                        </h3>
                        <table class="table table-primary" width="100%">
                            <tr>
@@ -26,4 +28,16 @@
             </t>
         </t>
     </template>
+
+
+    <record id="action_reports" model="ir.actions.report">
+        <field name="name">report_test_model</field>
+        <field name="model">hospital.test</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">om_hospital.report_test</field>
+        <field name="report_file">om_hospital.report_test</field>
+        <field name="binding_type">report</field>
+    </record>
+
+
 </odoo>

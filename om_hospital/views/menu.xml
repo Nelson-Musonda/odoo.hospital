@@ -24,7 +24,19 @@
     <menuitem id="menu_doctor"
               name="Doctor"
               sequence="6"
-              parent="om_hospital.menu_root"
+              parent="om_hospital.menu_test"
+              action="om_hospital.action_doctor"
+    />
+    <menuitem id="menu_doctor-1"
+              name="Doctor"
+              sequence="5"
+              parent="om_hospital.menu_doctor"
+              action="om_hospital.action_doctor"
+    />
+    <menuitem id="menu_doctor-2"
+              name="Doctor"
+              sequence="6"
+              parent="om_hospital.menu_doctor"
               action="om_hospital.action_doctor"
     />
 </odoo>
